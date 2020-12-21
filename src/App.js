@@ -3,7 +3,6 @@ import Header from './Components/Header';
 import Frase from './Components/Frase';
 import styled from '@emotion/styled';
 
-
 const Contenedor = styled.div`
   display: flex;
   align-items: center;
@@ -34,23 +33,22 @@ const Boton = styled.button`
 
 function App() {
 
-  const API_URL = process.env.REACT_APP_API_URL;
-  //console.log(API_URL);
-
   // state de frases
   const [frase, guardarFrase] = useState({});
-
+  
   const consultarAPI = async () => {
+    const API_URL = process.env.REACT_APP_API_URL;
+    //console.log(API_URL);
     const api = await fetch(`${API_URL}`);
     const frase = await api.json()
     guardarFrase(frase[0]);
-    console.log(frase[0])
+    //console.log(frase[0])
   }
 
-    // Cargar una frase
-    useEffect( () => {
+  // Cargar una frase
+  useEffect( () => {
       consultarAPI()
-    }, []);
+  }, []);
 
   return (
 
