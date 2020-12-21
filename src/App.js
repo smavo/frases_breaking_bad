@@ -39,7 +39,7 @@ function App() {
   const consultarAPI = async () => {
     const API_URL = process.env.REACT_APP_API_URL;
     //console.log(API_URL);
-    const api = await fetch(`${API_URL}`);
+    const api = await fetch(`${API_URL}/v1/quotes`);
     const frase = await api.json()
     guardarFrase(frase[0]);
     //console.log(frase[0])
