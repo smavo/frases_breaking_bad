@@ -3,11 +3,11 @@ import styled from '@emotion/styled';
 
 const Titulo = styled.div`
     background-color:#20232A;
-    padding: 20px;
+    padding: 20px 0;
     border-radius: 10px;
     text-align:center;
     text-transform:uppercase;
-    width:100%;
+    width:94vw;
     margin: 0 10px;
     color: #ffffff;
 
