@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
 const Titulo = styled.div`
     background-color:#20232A;
@@ -40,4 +41,8 @@ function Header({titulo}) {
     )
 }
 
-export default Header
+Header.propTypes = {
+    titulo: PropTypes.string.isRequired
+}
+
+export default Header;
